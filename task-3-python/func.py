@@ -1,3 +1,4 @@
+# DOCSTRING
 def sortDict(dict1):
     keys = dict1.keys() # Taking the keys of dictionary
     keys = list(map(int, keys))
@@ -22,14 +23,14 @@ def position(dict1):
 
 # Concatenates the values obtained keys in a string
 def concat(arr):
-    strg = str(arr[0] + ' '  + arr[1] + ' ' + arr[2] + ' ' + arr[3])
+    strg = ' '.join(arr)
     return strg
 
 # Joins the first and last character of each word(no spaces)
 def join(strg):
     arr = strg.split(" ") # Splits the string into array of each word seperated by spaces.
     ar = []
-    for i in arr:
+    for i in arr: #List comprehension ADD!!!!
         ar.append(i[0] + i[-1])
     joinString = "".join(ar)
     return joinString
