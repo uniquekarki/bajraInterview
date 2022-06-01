@@ -1,8 +1,3 @@
-# from crypt import methods
-# import mimetypes
-# from urllib import response
-
-# import requests
 from hospital import *
 
 @app.route('/hospital', methods = ['GET'])
