@@ -15,7 +15,8 @@
     │       ├── bajra.db             <- Database for this task.
     │       ├── api.py               <- Contains the APIs.
     │       ├── hospital.py          <- Contains the class and methods for the database operations.
-    │       └── settings.py          <- Initializes the database.
+    │       ├── settings.py          <- Initializes the database.
+    │       └── view.py              <- Code to view the database.
     │
     └── task-3-python                <- Python Programming based task.
         ├── screenshots              <- Contains screenshots of the output.
