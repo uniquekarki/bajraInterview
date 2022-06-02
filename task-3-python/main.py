@@ -2,8 +2,6 @@ from base import *
 from func import *
 import json # Only for printing the dictionary in presentable format.
 
-
-
 if __name__ == '__main__':
     # question 1
     chest = sortDict(chest)

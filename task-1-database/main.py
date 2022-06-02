@@ -1,5 +1,5 @@
 import sqlite3
-from prettytable import from_db_cursor
+from prettytable import from_db_cursor # To print Tables in Terminal
 
 def printTable(cur, table):
     stringQuery = 'SELECT * FROM ' + table
@@ -21,25 +21,6 @@ def question2(cur):
     return resultString
 
 def question3(cur):
-    # queryS = '''
-    #             SELECT 
-    #                 *,
-    #                 Employee.FirstName,
-    #                 Employee.MiddleName,
-    #                 Employee.LastName
-    #             FROM
-    #             (SELECT Employee.EmployeeID, 
-    #                     Employee.FirstName, 
-    #                     Employee.MiddleName, 
-    #                     Employee.LastName, 
-    #                     Department.DeptName, 
-    #                     Department.ManagerID
-    #             FROM Employee 
-    #             INNER JOIN Department 
-    #             ON Employee.DeptID = Department.DeptID) AS t1
-    #             WHERE t1.ManagerID = Employee.EmployeeID
-    #             INNER JOIN Employee
-    #             ON Employee.EmployeeID = t1.ManagerID'''
     queryS = '''
 WITH t1 AS (
   SELECT
@@ -65,7 +46,8 @@ ON t1.ManagerID = e.EmployeeID;
     cur.execute(queryS)
     resultString = from_db_cursor(cur)
     return resultString
-# e.FirstName || ' ' || e.LastName AS managerName
+
+
 if __name__ == '__main__':
     con = sqlite3.connect('task-1-database/bajra.db')
     cur = con.cursor()

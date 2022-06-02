@@ -1,6 +1,6 @@
 # Python Programming
 
-### To run the project:
+### Project Structure:
 
 1. `base.py` contains the dictionary and key list provided.
 2. `func.py` contains the functions that does the desired operations.

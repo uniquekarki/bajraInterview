@@ -1,8 +1,16 @@
-# DOCSTRING
+def bubbleSort(lst):
+    for i in range(len(lst)-1):
+        for j in range(0,len(lst)-i-1):
+            if lst[j+1]<lst[j]:
+                lst[j],lst[j+1] = lst[j+1],lst[j]
+    return lst
+
+
 def sortDict(dict1):
+    '''Takes dictionary as input and returns sorted dictionary'''
     keys = dict1.keys() # Taking the keys of dictionary
     keys = list(map(int, keys))
-    keys.sort() # Sorting the keys
+    keys = bubbleSort(keys) # Sorting the keys
     keys = list(map(str, keys))
     dict_copy={}
 
@@ -11,8 +19,8 @@ def sortDict(dict1):
         dict_copy[i] = dict1[i]
     return dict_copy
 
-# Returns the values from position first, second, last and second last
 def position(dict1):
+    '''Returns the values from position first, second, last and second last'''
     keys = list(dict1.keys())
     vals = []
     vals.append(dict1[keys[0]])
@@ -21,22 +29,20 @@ def position(dict1):
     vals.append(dict1[keys[-2]])
     return vals
 
-# Concatenates the values obtained keys in a string
 def concat(arr):
+    '''Concatenates the values obtained keys in a string'''
     strg = ' '.join(arr)
     return strg
 
-# Joins the first and last character of each word(no spaces)
 def join(strg):
+    '''Joins the first and last character of each word(no spaces)'''
     arr = strg.split(" ") # Splits the string into array of each word seperated by spaces.
-    ar = []
-    for i in arr: #List comprehension ADD!!!!
-        ar.append(i[0] + i[-1])
+    ar = [x[0]+x[-1] for x in arr]
     joinString = "".join(ar)
     return joinString
 
-# Calculates the occurance of each letter and returns the top 5 letters with their occurance.
 def occurance(joinString):
+    '''Calculates the occurance of each letter and returns the top 5 letters with their occurance.'''
     joinString = joinString.lower()
     dict1 = {}
     for i in joinString:
@@ -55,16 +61,14 @@ def occurance(joinString):
     vals1 = list(dict_copy.values())
     return dict_copy, vals1 # Returns dictionary of letters(keys) and occurance(values), and array of occurance alone.
 
-# Adds the key list with the occurance list.
 def addKey(key_list, arr):
+    '''Adds the key list with the occurance list.'''
     addArr= []
     for i in range(len(arr)):
         addArr.append(key_list[i]+arr[i])
     return addArr
 
-# Converts the list of decimal values into corresponding ASCII values
 def asc(arr):
-    finalArr = []
-    for i in arr:
-        finalArr.append(chr(i))
+    '''Converts the list of decimal values into corresponding ASCII values'''
+    finalArr = [chr(i) for i in arr]
     return finalArr
