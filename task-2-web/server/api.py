@@ -12,7 +12,7 @@ def get_appointment_by_id(id):
 @app.route('/hospital', methods = ['POST'])
 def add_appointment():
     request_data = request.get_json()
-    Hospital.add_appointment(request_data['patientName'], request_data['doctorName'],request_data['appointmentDate'])
+    Hospital.add_appointment(request_data['patientName'], request_data['doctorName'], request_data['appointmentDate'])
     response = Response("Appointment Added", 201, mimetype = 'application/json')
     return response
 

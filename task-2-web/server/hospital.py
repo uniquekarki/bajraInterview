@@ -9,8 +9,7 @@ class Hospital(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     patientName = db.Column(db.String(80), nullable = False)
     doctorName = db.Column(db.String(80), nullable = False)
-    appointmentDate = db.Column(db.DateTime, nullable=False,
-        default = datetime.datetime.utcnow)
+    appointmentDate = db.Column(db.DateTime, nullable=False, default = datetime.datetime.utcnow)
 
     def json(self):
         return {'id': self.id,
@@ -19,24 +18,24 @@ class Hospital(db.Model):
         'appointmentDate': self.appointmentDate
         }
 
-    def add_appointment(self, patientName, doctorName, appointmentDate):
-        new_appointment = Hospital(patientName = patientName, doctorName = doctorName, appointmentDate = appointmentDate)
+    def add_appointment(_patientName, _doctorName, _appointmentDate):
+        new_appointment = Hospital(patientName = _patientName, doctorName = _doctorName, appointmentDate = _appointmentDate)
         db.session.add(new_appointment)
         db.session.commit()
 
-    def get_all_appointment(self):
+    def get_all_appointment():
         return [Hospital.json(hospital) for hospital in Hospital.query.all()]
 
-    def get_appointment(self, id):
-        return [Hospital.json(Hospital.query.filter_by(id=id).first())]
+    def get_appointment(_id):
+        return [Hospital.json(Hospital.query.filter_by(id=_id).first())]
 
-    def update_appointment(self, id, patientName, doctorName, appointmentDate):
-        appointment_to_update = Hospital.query.filter_by(id=id).first()
-        appointment_to_update.patientName = patientName
-        appointment_to_update.doctorName = doctorName
-        appointment_to_update.appointmentDate = appointmentDate
+    def update_appointment(_id, _patientName, _doctorName, _appointmentDate):
+        appointment_to_update = Hospital.query.filter_by(id=_id).first()
+        appointment_to_update.patientName = _patientName
+        appointment_to_update.doctorName = _doctorName
+        appointment_to_update.appointmentDate = _appointmentDate
         db.session.commit()
 
-    def delete_appointment(self, id):
-        Hospital.query.filter_by(id=id).delete()
+    def delete_appointment(_id):
+        Hospital.query.filter_by(id=_id).delete()
         db.session.commit()
