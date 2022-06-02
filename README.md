@@ -1,4 +1,4 @@
-# Bajra Technologies Interview Interview Test Task
+# Bajra Technology's Interview Interview Test Task
 
 ### Project Structure:
 ------------
