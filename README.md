@@ -12,8 +12,9 @@
     ├── task-2-web                   <- Web based task
     │   ├── screenshots              <- Contains screenshots of the output.
     │   └── server
-    │       ├── bajra.db             <- Database for this task.
     │       ├── api.py               <- Contains the APIs.
+    │       ├── bajra.db             <- Database for this task.
+    │       ├── db_init.py           <- Initializes the database.
     │       ├── hospital.py          <- Contains the class and methods for the database operations.
     │       ├── settings.py          <- Initializes the database.
     │       └── view.py              <- Code to view the database.

@@ -20,3 +20,16 @@ This project consists of only the backend required to perform the CRUD applicati
     > python api.py
 
 ### Results:
+
+The result of each API call from postman is shown below.
+1. Added data:
+![Screenshot 1](screenshots/1.png)
+
+2. Updated data:
+![Screenshot 2](screenshots/2.png)
+
+3. Viewed data:
+![Screenshot 3](screenshots/3.png)
+
+4. Deleted data:
+![Screenshot 4](screenshots/4.png)

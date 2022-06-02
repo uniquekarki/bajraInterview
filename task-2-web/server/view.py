@@ -9,3 +9,10 @@ cur.execute(stringQuery)
 mytable = from_db_cursor(cur)
 print('\nHospital Table')
 print(mytable)
+
+
+stringQuery = 'SELECT * FROM users'
+cur.execute(stringQuery)
+mytable = from_db_cursor(cur)
+print('\nHospital Table')
+print(mytable)
