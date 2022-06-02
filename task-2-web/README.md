@@ -4,6 +4,7 @@ This project consists of only the backend required to perform the CRUD applicati
 ### Project Structure:
 
 1. `api.py` contains APIs required.
+2. `db_init.py` initializes database.
 2. `hospital.py` contains Hospital class and methods that is required to perform required database operations.
 3. `settings.py` initializes database.
 4. `bajra.db` is the database for the project.
