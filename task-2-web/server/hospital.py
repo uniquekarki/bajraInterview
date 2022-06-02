@@ -31,10 +31,10 @@ class Hospital(db.Model):
         return [Hospital.json(Hospital.query.filter_by(id=id).first())]
 
     def update_appointment(self, id, patientName, doctorName, appointmentDate):
-        movie_to_update = Hospital.query.filter_by(id=id).first()
-        movie_to_update.patientName = patientName
-        movie_to_update.doctorName = doctorName
-        movie_to_update.appointmentDate = appointmentDate
+        appointment_to_update = Hospital.query.filter_by(id=id).first()
+        appointment_to_update.patientName = patientName
+        appointment_to_update.doctorName = doctorName
+        appointment_to_update.appointmentDate = appointmentDate
         db.session.commit()
 
     def delete_appointment(self, id):
