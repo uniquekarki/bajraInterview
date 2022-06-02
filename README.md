@@ -1,6 +1,7 @@
 # Bajra Technologies Interview Interview Test Task
 
 ### Project Structure:
+------------
 
 ├── task-1-database              <- SQL based task
 │   ├── bajra.db                 <- Database file that contains Employee and Department table.
@@ -18,3 +19,5 @@
     ├── base.py                  <- Contains the provided input i.e. dictionary and key list.
     ├── func.py                  <- Contains functions used for required operations.
     └── main.py                  <- Imports the func and base file to call desired functions and displays the result.
+
+--------
