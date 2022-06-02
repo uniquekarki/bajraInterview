@@ -1,46 +1,23 @@
-Housing Price
-==============================
+# Bajra Technologies Interview Interview Test Task
 
-Housing price ML model
-
-### To run the project:
-1. Install the requirement from requirements.txt.
-2. Go to '/src'.
-3. Run `main.py` file.
-
-### Result:
-1. Cleaned data is stored in `/data/processed` as `clean_test_data.csv` and `clean_train_data.csv`.
-2. Predicted data is saved in `/data/prediction/prediction.csv`.
-3. Models for categorical features encoding, scaling of numerical input features and output is stored in `/models/data-cleaning-models`
-4. Final ML model is stored in `/models/final_gbr.pkl`
-
-Project Organization
+### Project Structure:
 ------------
 
-    ├── LICENSE
-    ├── README.md                    <- The top-level README for developers using this project.
-    ├── data
-    │   ├── prediction               <- Final result.
-    │   ├── processed                <- The final, canonical data sets for modeling.
-    │   └── raw                      <- The original, immutable data dump.
+    ├── task-1-database              <- SQL based task
+    │   ├── bajra.db                 <- Database file that contains Employee and Department table.
+    │   ├── db_init.py               <- The python file that initializes the database and add value in tables created.
+    │   └── main.py                  <- The python file that contains SQL queries and prints the output.
     │
-    ├── models                       <- Trained and serialized models, model predictions, or model summaries
-    │   ├── data-cleaning-models     <- Models used for categorical feature encoding and feature scaling.
-    │   └── ml-models                <- The final ML model used for prediction
+    ├── task-2-web                   <- Web based task
+    │   └── server
+    │       ├── bajra.db             <- Database for this task.
+    │       ├── api.py               <- Contains the APIs.
+    │       ├── hospital.py          <- Contains the class and methods for the database operations.
+    │       └── settings.py          <- Initializes the database.
     │
-    ├── notebooks                    <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                                   the creator's initials, and a short `-` delimited description, e.g.
-    │                                   `1.0-jqp-initial-data-exploration`.
-    │
-    ├── requirements.txt             <- The requirements file for reproducing the analysis environment, e.g.
-    │                                   generated with `pip freeze > requirements.txt`
-    │
-    └── src                          <- Source code for use in this project.
-        ├── dataCleaning.py          <- Final result.
-        ├── main.py                  <- The final, canonical data sets for modeling.
-        └── modelTraining.py         <- The original, immutable data dump.
-        
-
-
+    └── task-3-python                <- Python Programming based task.
+        ├── base.py                  <- Contains the provided input i.e. dictionary and key list.
+        ├── func.py                  <- Contains functions used for required operations.
+        └── main.py                  <- Imports the func and base file to call desired functions and displays the result.
 
 --------
