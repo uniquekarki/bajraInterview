@@ -14,6 +14,9 @@
 3. Run the following command for desired operations:
    > python main.py
 
-### Result:
+### Results:
 
-The desired output of each step is clearly displayed in the terminal.
+The desired output of each step is clearly displayed in the terminal as shown below.
+![Screenshot 1](screenshots/1.png)
+![Screenshot 2](screenshots/2.png)
+![Screenshot 3](screenshots/3.png)

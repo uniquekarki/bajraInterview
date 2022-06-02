@@ -49,7 +49,7 @@ ON t1.ManagerID = e.EmployeeID;
 
 
 if __name__ == '__main__':
-    con = sqlite3.connect('task-1-database/bajra.db')
+    con = sqlite3.connect('bajra.db')
     cur = con.cursor()
 
     printTable(cur, 'Employee')
