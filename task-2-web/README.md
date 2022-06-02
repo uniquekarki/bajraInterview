@@ -12,10 +12,8 @@ This project consists of only the backend required to perform the CRUD applicati
 ### To run the project:
 
 1. First install prettytable, flask, flask-sqlalchemy.
-2. Run the following command to initialize the database:
-    > python<br>
-    > from hospital import db<br>
-    > db.create_all()
+2. Run the following command to host the backend locally:
+    > python db_init.py
 3. Run the following command to host the backend locally:
     > python api.py
 
